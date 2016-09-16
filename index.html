@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Cheerp test</title>
+		<script src="le.min.js"></script>
+		<script>
+			LE.init('2370dfb1-d9f8-4c32-9dbe-3efb28a0134e');
+			function logOnline(str)
+			{
+				LE.log(str);
+			}
+		</script>
+		<script defer src="main.js"></script>
+		<style>
+			.button-move
+			{
+				width: 100px;
+				height: 50px;
+			}
+			.piece
+			{
+				width: 100px;
+				height: 100px;
+				border:1px solid #000000;
+			}
+			.piece.blank
+			{
+				content:url("empty.svg");
+			}
+			.piece.red
+			{
+				content:url("piece_player.svg");
+			}
+			.piece.black
+			{
+				content:url("piece_computer.svg");
+			}
+			div.label
+			{
+				font-size: 2.0em;
+			}
+			button.reset
+			{
+				width: 100px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><div class="label" id="main-label">Red's Turn</div></td>
+				<td><button class="reset" id="reset-button">Reset Game</button></td>
+			</tr>
+		</table>
+		<table id="main-table">
+			<tr>
+				<td><button class="button-move" id="0">Move</button></td>
+				<td><button class="button-move" id="1">Move</button></td>
+				<td><button class="button-move" id="2">Move</button></td>
+				<td><button class="button-move" id="3">Move</button></td>
+				<td><button class="button-move" id="4">Move</button></td>
+				<td><button class="button-move" id="5">Move</button></td>
+				<td><button class="button-move" id="6">Move</button></td>
+			</tr>
+		</table>
+	</body>
+</html>
